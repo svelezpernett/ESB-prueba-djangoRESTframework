@@ -24,6 +24,7 @@ router.register(r'users', views.UserViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('modules.maaji.urls')),
+    path('apiview/', include('modules.maaji.api.urls')),
     path('api-auth/', include('rest_framework.urls')),
     path('api/', include(router.urls))
 ]
